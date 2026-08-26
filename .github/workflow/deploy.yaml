@@ -1,8 +1,17 @@
-name: first-pipeline
-on: push
+name: My First CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  echo-hello:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      -name: echo-hello
-      run: echo "HELLO, WORLD"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run a test command
+        run: echo "Hello! GitHub Actions is working."
