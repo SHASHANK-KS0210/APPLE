@@ -1,9 +1,14 @@
 name: second-pipeline
+
 on: push
+
 env:
-  APP-NAME: login-app
+  APP_NAME: login-app
+
 jobs:
   sample:
     runs-on: ubuntu-latest
+
     steps:
-      run: echo $APP-NAME
+      name: echo
+      - run: echo "$APP_NAME"
