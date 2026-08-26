@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Run a test command
+       -name: Run a test command
         run: echo "Hello! GitHub Actions is working."
