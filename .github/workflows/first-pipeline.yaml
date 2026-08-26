@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - name: echo
-        run: echo "${{github.actor}}"
+        run: echo "${{github.event_name}}"
