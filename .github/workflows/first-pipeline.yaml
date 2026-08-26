@@ -1,9 +1,13 @@
 name: My First CI Pipeline
 
+<<<<<<< HEAD
 on:
   pull_request:
     branches:
       - main
+=======
+on: workflow_dispatch
+>>>>>>> a58586257522be7406da50f6e594975c7300604a
 
 jobs:
   build:
@@ -14,4 +18,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Test
+<<<<<<< HEAD
         run: echo "Pull Request pipeline is working"
+=======
+        run: echo "GitHub Actions is working"
+>>>>>>> a58586257522be7406da50f6e594975c7300604a
