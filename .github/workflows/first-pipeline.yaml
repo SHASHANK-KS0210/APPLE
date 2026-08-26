@@ -1,32 +1,17 @@
 name: My First CI Pipeline
 
-
 on:
-  pull_request:
+  push:
     branches:
       - main
-=======
-on: workflow_dispatch
->>>>>>> a58586257522be7406da50f6e594975c7300604a
-=======
-on: workflow_dispatch
->>>>>>> a58586257522be7406da50f6e594975c7300604a
 
 jobs:
-  install:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Test
-<<<<<<< HEAD
-<<<<<<< HEAD
-        run: echo "Pull Request pipeline is working"
-=======
-        run: echo "GitHub Actions is working"
->>>>>>> a58586257522be7406da50f6e594975c7300604a
-=======
-        run: echo "GitHub Actions is working"
->>>>>>> a58586257522be7406da50f6e594975c7300604a
+      - name: Run a test command
+        run: echo "Hello! GitHub Actions is working."
