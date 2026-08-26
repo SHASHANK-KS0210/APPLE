@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - name: echo
-        run: echo "${{secrets.PASSWORD}}"
+        run: echo "${{github.actor}}"
