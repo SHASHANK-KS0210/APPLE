@@ -2,8 +2,6 @@ name: second-pipeline
 
 on: push
 
-env:
-  APP_NAME: login-app
 
 jobs:
   sample:
@@ -11,4 +9,4 @@ jobs:
 
     steps:
       - name: echo
-        run: echo "$APP_NAME"
+        run: echo "${{vars.DOCKER_PASSCODE}}"
