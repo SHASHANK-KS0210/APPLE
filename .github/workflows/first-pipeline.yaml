@@ -1,16 +1,17 @@
 name: My First CI Pipeline
 
 on:
-  workflow_dispatch
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD:.github/workflows/first-pipeline.yaml
-      - name: Run a test command
-=======
-       -name: Run a test command
->>>>>>> 9b935f139f25643434e18f2958e7e19f3ffdd74b:.github/workflows/deploy.yaml
-        run: echo "Hello! GitHub Actions is working."
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test
+        run: echo "Pull Request pipeline is working"
