@@ -39,6 +39,6 @@ jobs:
 
         with:
           name: login-logout.jar
-          path: target/*.jar
+          path: target/*.jarr
 
     
